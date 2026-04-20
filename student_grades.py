@@ -49,9 +49,26 @@ class StudentsGrades:
 
 
 def main ():
-    skore = self.scores
-    pocet = len (skore)
-    for s in skore:
+    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+    pocet = results.count()
+    r = -1
+    for student in range (pocet):
+        poradi = r+1
+        skore = results.get_by_index(student)
+        znamka = results.get_grade(student)
+        print (f"Student {poradi}: {skore} points - {znamka}")
+
+    i = results.find (100)
+    print (f"Indexy těch co měli 100%: {i}")
+
+    serazene = results.get_sorted()
+    print (f"Seřazené výsledky studentů: {serazene}")
+
+    from sorting import random_numbers
+
+    random_results = StudentsGrades(random_numbers(30, 0, 100))
+    print(random_results.count())
+    print(random_results.get_sorted())
 
 
 
