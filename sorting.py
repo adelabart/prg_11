@@ -21,34 +21,18 @@ def selection_sort (values):
         values [min_int], values [min_index] = values [min_index], values [min_int]
         print (values)
 
-# def bubble_sort (values):
-new_values = values.copy()
-print (new_values)
-n = len (new_values)
+def bubble_sort (values):
+    new_values = values.copy()
+    print (new_values)
+    n = len (new_values)
+    for val in range (n - 1):
+        for v in range (n - val - 1):
+            if new_values[v] > new_values [v+1]:
+                new_values[v], new_values [v+1] = new_values [v+1], new_values [v]
+    print (new_values)
+    return new_values
 
-plt.ion()
-plt.show()
 
-for val in range (n - 1):
-    for v in range (n - val - 1):
-
-        index_highlight1 = j
-        index_highlight2 = j + 1
-        colors = ["steelblue"] * len(values)
-        colors[index_highlight1] = "tomato"
-        colors[index_highlight2] = "tomato"
-        plt.clf()
-        plt.bar(range(len(values)), values, color=colors)
-        plt.title("Bubble Sort")
-        plt.pause(0.1)
-
-        if new_values[v] > new_values [v+1]:
-            new_values[v], new_values [v+1] = new_values [v+1], new_values [v]
-
-        plt.ioff()
-        plt.show()
-
-print (new_values)
 
 
 
