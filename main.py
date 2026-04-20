@@ -5,6 +5,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-from student_grades.py import StudentsGrades
+
+
 
 

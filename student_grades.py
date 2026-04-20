@@ -48,6 +48,12 @@ class StudentsGrades:
         return new_values
 
 
+def main ():
+    skore = self.scores
+    pocet = len (skore)
+    for s in skore:
+
+
 
 
 
